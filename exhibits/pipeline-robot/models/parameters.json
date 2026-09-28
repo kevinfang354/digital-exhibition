@@ -1,0 +1,35 @@
+{
+  "units": "mm",
+  "inputs": {
+    "bodyLength": 200,
+    "wheelDiameter": 28,
+    "radialWheelCenter": 69,
+    "frontX": -85,
+    "rearX": 85,
+    "midX": -8,
+    "frontWheelAngle": 10
+  },
+  "documentedAnchors": [
+    "200mm nominal length",
+    "28mm wheel diameter",
+    "10deg front wheel angle",
+    "160mm T-pipe internal diameter"
+  ],
+  "displayMotion": {
+    "frontPivotX": -35,
+    "turnPhaseMilliseconds": [
+      8000,
+      10000,
+      10000,
+      17000,
+      15000
+    ],
+    "peakRelativeSteerDegrees": 58,
+    "nominalScrewPitchMm": 88.63160755574124,
+    "freeWheelCenterRadiusMm": 69,
+    "frontTravelFraction": 0.35,
+    "otherArmsTravelFraction": 0.55,
+    "source": "model-source.js / RobotExhibit.turnPose() and createRobot().setState()"
+  },
+  "estimated": "Free wheel extension, screw lead, pivot location, stroke fractions, relative turn limit, rear rolling path, shell and internal arrangement are exhibition estimates, not CAD measurements. Static GLB is the unloaded unsteered base pose."
+}
