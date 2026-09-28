@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="螺旋式多适应管道机器人数字展品：统一查看三维结构、T形支管转向与弹性臂越障演示。">
+<title>管内探索 · 管道机器人数字展品</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c777e'/%3E%3Cpath d='M5 11h10V5h6v10h6v6H5z' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到展品内容</a>
+<header>
+  <a class="brand" href="https://hhu.winnielyu.com/robotics/">
+    <span class="brandmark">R<span>↗</span></span>
+    <span>特种机器人团队成果数字展馆<small>SPECIAL ROBOTICS · TEAM SHOWCASE</small></span>
+  </a>
+  <nav aria-label="展品导航">
+    <a href="#structure">结构解析</a>
+    <a href="#interactive">三维交互</a>
+    <a href="#motion">转向与越障</a>
+    <a href="#video">实验影像</a>
+  </nav>
+</header>
+<main id="main">
+  <div class="breadcrumb"><a href="https://hhu.winnielyu.com/robotics/">展览馆</a><span>/</span>管内探索</div>
+  <div class="title-row">
+    <div><p class="eyebrow">04 / IN-PIPE EXPLORATION</p><h1>管内探索</h1><p class="subtitle">螺旋推进、独立转向与弹性越障</p></div>
+    <div class="edition">V6 · 数字展品<small>整机结构 × T形转向 × 越障机理</small></div>
+  </div>
+  <div class="exhibit-layout">
+    <section class="showcase" aria-label="展品预览">
+      <div class="stage-heading"><span id="image-title">整机实物</span><span>河海大学 · 机电工程学院</span></div>
+      <div class="image-area">
+        <img id="hero-image" src="assets/robot-original.png" alt="管道机器人实物：白色壳体、弹簧伸缩臂和被动滚轮">
+        <a class="primary" href="#interactive"><span>◈</span> 查看统一三维交互 <span>↓</span></a>
+      </div>
+      <div class="preview-tabs" role="group" aria-label="切换展品图片">
+        <button class="selected" data-preview="whole">整机实物</button>
+        <button data-preview="arm">弹性伸缩臂</button>
+        <button data-preview="test">T形管实验</button>
+      </div>
+      <p id="image-caption" class="caption">实物结构展示。三维模型为简化重建，用于观察主要结构关系。</p>
+    </section>
+    <aside class="intro">
+      <p class="eyebrow">ABOUT THIS EXHIBIT</p>
+      <h2>推进与转向分路，<br>分支处协同动作。</h2>
+      <p>前端倾斜滚轮产生螺旋推进；独立转向电机经齿轮与连架杆调整前旋转单元。遇到凸台时，弹性伸缩臂受压并帮助轮组适应障碍。</p>
+      <ol class="features">
+        <li><span>01</span><div><h3>螺旋驱动</h3><p>旋转与轴向移动相结合。</p></div></li>
+        <li><span>02</span><div><h3>独立转向传动</h3><p>转向电机经齿轮组和连架杆调整前端方向。</p></div></li>
+        <li><span>03</span><div><h3>弹性支撑与被动变径</h3><p>弹簧压缩帮助轮组适应管壁和局部凸起。</p></div></li>
+      </ol>
+      <a class="text-link" href="#video">观看管道实验影像 <span>↓</span></a>
+    </aside>
+  </div>
+
+  <div class="facts" aria-label="机器人结构特征">
+    <div><strong>3 <small>组</small></strong><span>前、中、后结构单元</span></div>
+    <div><strong>3+2+3</strong><span>弹性臂周向布局</span></div>
+    <div><strong>2 <small>路</small></strong><span>推进与转向传动</span></div>
+    <div><strong>T</strong><span>分支转向实验</span></div>
+  </div>
+
+  <section class="interactive-entry" id="interactive">
+    <div class="interactive-copy">
+      <p class="eyebrow">01 / INTERACTIVE MODULE</p>
+      <h2>一个三维展台，<br>结构与动作都在这里。</h2>
+      <p>在同一模块中查看整机拆解、T形支管转向和慢速越障。前端弹性轮组贴壁预紧并持续螺旋转动，后轮滚动支撑机身跟进；可以逐段查看两种运动如何配合。</p>
+      <div class="module-tags"><span>结构拆解</span><span>T形支管转向</span><span>弹性臂越障</span></div>
+      <button id="open-viewer" class="primary module-launch"><span>◈</span> 打开统一三维交互 <span>↗</span></button>
+    </div>
+    <div class="interactive-preview">
+      <img src="assets/tpipe-sequence.png" alt="T形管道中的机器人实验画面" loading="lazy">
+      <div class="interactive-preview-label"><span>统一交互模块</span><strong>先转向，再协同进入支管</strong></div>
+    </div>
+  </section>
+
+  <section class="section" id="structure">
+    <div class="section-title"><div><p class="eyebrow">02 / STRUCTURE</p><h2>从整机走近机构</h2></div><p>三组结构，两条传动路线。</p></div>
+    <div class="structure-grid">
+      <article>
+        <div class="diagram"><img src="assets/drive.png" alt="螺旋推进传动原理图" loading="lazy"></div>
+        <span class="number">01</span><h3>前旋转单元</h3>
+        <p>三个弹性伸缩臂沿周向布置。前端滚轮具有偏转角，前单元旋转时形成螺旋行进。</p>
+      </article>
+      <article>
+        <div class="diagram"><img src="assets/steering.png" alt="独立转向传动原理图" loading="lazy"></div>
+        <span class="number">02</span><h3>中间传动单元</h3>
+        <p>转向电机经直齿轮、锥齿轮组和连架杆带动前旋转单元改变朝向。推进与转向由两条传动路线完成。</p>
+      </article>
+      <article>
+        <div class="diagram"><img src="assets/principle.png" alt="包含双电机与传动链的整机原理图" loading="lazy"></div>
+        <span class="number">03</span><h3>后驱动单元</h3>
+        <p>驱动电机提供螺旋推进，独立转向电机控制前单元。后三个弹性伸缩臂提供支撑。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="motion">
+    <div class="section-title"><div><p class="eyebrow">03 / ADAPTATION</p><h2>转向与越障动作</h2></div><p>动作演示已集中在上方的统一三维交互模块。</p></div>
+    <div class="motion-grid">
+      <article class="motion-card">
+        <div class="motion-image"><img src="assets/steering.png" alt="管道机器人转向传动机构" loading="lazy"></div>
+        <p class="eyebrow">T-JUNCTION · STEERING</p><h3>T形分支转向</h3>
+        <p>前端螺旋轮带机器人到达分支口并短暂停转。转向机构使前端开口朝支管，弹簧将倾斜轮压向管壁；前端恢复旋转并螺旋进入支管。后轮贴壁滚动、支撑机身向上跟进，转向机构在进入过程中反向调整。</p>
+        <ol class="motion-steps">
+          <li>到达支路口，暂停螺旋驱动。</li>
+          <li>前单元开口朝向支管，弹性臂贴壁形成预紧。</li>
+          <li>前端倾斜轮连续旋转，沿管壁螺旋进入支管。</li>
+          <li>后轮滚动支撑并推进机身，转向反向调节。</li>
+        </ol>
+      </article>
+      <article class="motion-card">
+        <div class="motion-image"><img src="assets/obstacle.png" alt="管道机器人通过凸台时弹性伸缩臂变化的连续照片" loading="lazy"></div>
+        <p class="eyebrow">PASSIVE COMPLIANCE · OBSTACLE</p><h3>弹性臂越过凸台</h3>
+        <p>驱动轮接近凸台时弹性臂受压，其他支撑臂维持支撑；轮组通过后，弹簧恢复。三维动画只呈现弹性臂的慢速压缩与回弹，不模拟实际接触力或越障高度。</p>
+        <ol class="motion-steps">
+          <li>驱动轮接近局部凸起，弹簧保持弹性支撑。</li>
+          <li>轮子越过凸台时，伸缩臂相对压缩。</li>
+          <li>轮组通过后，弹性臂恢复并继续支撑。</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="video">
+    <div class="section-title"><div><p class="eyebrow">04 / EXPERIMENTS</p><h2>管道实验影像</h2></div><p>查看T形管道转向与垂直爬升过程。</p></div>
+    <div class="video-grid">
+      <article>
+        <video controls preload="none" playsinline poster="assets/tpipe-poster.png"><source src="assets/tpipe-experiment.mp4" type="video/mp4">请下载视频观看。</video>
+        <div class="video-heading"><h3>T形管道运动实验</h3><span>01:47</span></div>
+        <p>观察直管行进与分支处的转向过程。</p>
+        <a class="text-link" download href="assets/tpipe-experiment.mp4">下载实验视频 ↓</a>
+      </article>
+      <article>
+        <video controls preload="none" playsinline poster="assets/vertical-poster.png"><source src="assets/vertical-experiment.mp4" type="video/mp4">请下载视频观看。</video>
+        <div class="video-heading"><h3>垂直爬升实验</h3><span>00:33</span></div>
+        <p>观察弹性轮组支撑下的垂直管内运动。</p>
+        <a class="text-link" download href="assets/vertical-experiment.mp4">下载实验视频 ↓</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="materials">
+    <div class="section-title"><div><p class="eyebrow">05 / MODEL</p><h2>三维模型</h2></div><p>下载结构展示模型。</p></div>
+    <div class="resources single-resource">
+      <a href="models/pipeline-robot.glb" download><span>GLB · 三维模型</span><strong>下载通用展示模型 ↗</strong><small>可导入Blender等支持glTF的软件；单位为米</small></a>
+    </div>
+    <details class="limits">
+      <summary>模型展示范围</summary>
+      <p>整机模型用于展示三组结构、弹性支撑臂和主要传动关系，不是工程CAD转换件。局部尺寸和内部安装关系做了简化，不能用于制造、净空或性能验证。</p>
+      <p>T形转向沿用与结构浏览相同的 3+2+3 轮组模型。螺旋前轮、后轮滚动、前臂贴壁压缩和机身位移在动画中联动。后部电机经传动轴驱动前端旋转；后轮随运动滚动，没有另设未经资料证实的轮毂电机。实际传动比、接触力与摩擦仍待实测。</p>
+      <p>可交互动作属于展品原理示意；GLB文件包含静态结构模型，动画在网页内运行。</p>
+    </details>
+  </section>
+
+  <nav class="next-exhibits" aria-label="继续探索展馆">
+    <span>继续探索</span>
+    <a href="https://hhu.winnielyu.com/robotics/exhibits/aerial-exploration/">空中探索 <span>↗</span></a>
+    <a href="https://hhu.winnielyu.com/robotics/exhibits/wall-operation/">壁面作业 <span>↗</span></a>
+    <a href="https://hhu.winnielyu.com/robotics/exhibits/all-terrain/">全地形通行 <span>↗</span></a>
+  </nav>
+  <footer><span>管内探索 · 数字展品 V6</span><a href="https://hhu.winnielyu.com/robotics/">返回特种机器人团队成果数字展馆 ↗</a></footer>
+</main>
+
+<dialog id="viewer-dialog">
+  <div class="viewer-top">
+    <div><strong>螺旋式多适应管道机器人</strong><small>V6 · 统一三维交互展台</small></div>
+    <button id="close-viewer" aria-label="关闭三维交互">关闭 ×</button>
+  </div>
+  <div class="viewer-body">
+    <div id="canvas-wrap">
+      <div id="viewer-status" role="status">正在准备三维模型…</div>
+      <div class="canvas-note" id="canvas-note">拖动旋转 · 滚轮/双指缩放 · 点选部件<br>整机模型同时用于结构与动作观察</div>
+    </div>
+    <aside class="controls">
+      <h2>三维交互控制</h2>
+      <label>结构视图
+        <select id="view-mode">
+          <option value="whole">整机外观</option>
+          <option value="inside">内部传动</option>
+          <option value="explode">三单元拆解</option>
+        </select>
+      </label>
+      <label>装配层级
+        <select id="layer">
+          <option value="4">完整结构与外壳</option>
+          <option value="1">1 · 支承与轴系</option>
+          <option value="2">2 · 加入电机与传动</option>
+          <option value="3">3 · 加入弹性臂与轮组</option>
+        </select>
+      </label>
+      <label>拆解程度 <output id="explode-value">0%</output>
+        <input id="explode" type="range" min="0" max="1" value="0" step="0.01">
+      </label>
+      <label>动作演示
+        <select id="action-mode">
+          <option value="turn">T形分支转向</option>
+          <option value="obstacle">凸台越障</option>
+        </select>
+      </label>
+      <div id="turn-legend" class="turn-legend" aria-label="转向时保留的结构单元">
+        <span>前端 · 3臂</span><span>中段 · 2臂</span><span>后端 · 3臂</span>
+      </div>
+      <div class="traction-readout" id="traction-readout" aria-label="转向演示的运动联动" hidden>
+        <div><span>前端螺旋</span><strong id="front-turns">0.0 转</strong></div>
+        <div><span>前臂贴壁 · 模型压缩</span><strong id="front-preload">0/3 臂 · 0.0 mm</strong></div>
+        <div><span>后轮滚动</span><strong id="rear-roll">0.0 转</strong></div>
+      </div>
+      <button id="front-detail" class="control-button" hidden>跟随前端细节</button>
+      <p class="control-note" id="mode-note">前端倾斜轮贴壁旋转并向支管行进，后轮滚动随动推进；约60秒，可暂停、逐段查看。</p>
+      <button id="play-action" class="control-button">慢速播放</button>
+      <button id="next-action" class="control-button">从第一阶段开始</button>
+      <label class="timeline-label">动作时间 <output id="timeline-value">0:00 / 60秒</output>
+        <input id="action-timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="拖动查看动作时间">
+      </label>
+      <div class="action-status" id="action-status" role="status" aria-live="polite">选择动作后，可慢速播放、暂停或逐阶段查看。</div>
+      <ol class="action-steps" id="action-steps"></ol>
+      <a class="text-link motion-video-link" href="assets/tpipe-experiment.mp4" target="_blank" rel="noopener">打开T形管道实拍视频 ↗</a>
+      <button id="play-spin" class="control-button">播放螺旋驱动（慢速）</button>
+      <div class="view-buttons"><button id="front-view">轴向视图</button><button id="side-view">侧视图</button></div>
+      <button id="reset" class="control-button">恢复初始</button>
+      <a class="download-model" href="models/pipeline-robot.glb" download>下载GLB模型 ↓</a>
+      <label class="file-label">打开本地GLB模型<input id="load-glb" type="file" accept=".glb"></label>
+      <div class="part-info" aria-live="polite">
+        <h3 id="part-name">点选模型部件</h3><p id="part-evidence">点选结构查看部件名称。</p>
+        <select id="part-list" aria-label="选择部件"><option value="">选择部件…</option></select>
+      </div>
+    </aside>
+  </div>
+</dialog>
+<script src="vendor/three.min.js"></script>
+<script src="vendor/OrbitControls.js"></script>
+<script src="vendor/GLTFLoader.js"></script>
+<script src="model-source.js"></script>
+<script src="software-renderer.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>
