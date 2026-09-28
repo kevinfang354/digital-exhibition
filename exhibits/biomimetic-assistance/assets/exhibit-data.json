@@ -1,0 +1,107 @@
+{
+  "exhibit": {
+    "id": "biomimetic-assistance",
+    "number": "04",
+    "category": "柔顺与支撑",
+    "english": "COMPLIANT ASSISTANCE",
+    "name": "仿生变刚度驱动器与外骨骼",
+    "version": "V1.1",
+    "accent": "cyan",
+    "tagline": "让柔性结构贴合身体，让可调刚度承担支撑。",
+    "presentationCover": "assets/exo-hero.webp",
+    "tags": [
+      "气动助力",
+      "层阻塞变刚度",
+      "人机协同"
+    ],
+    "description": "从三根PAM组成的VSCA驱动器出发，观察双侧并联腰椎外骨骼在屈曲、侧弯中的连接与运动关系。",
+    "identity": "主展品为VSCA与PVSAE；ODHA为独立的相关研究拓展。",
+    "evidence": "论文结构图比例复原，非原始CAD；实验结果按上传手稿呈现。",
+    "cover": "assets/exo-hero.webp",
+    "viewer": "viewer.html",
+    "controls": [
+      "观察整机",
+      "切换驱动器",
+      "点选部件",
+      "结构展开",
+      "动作演示",
+      "透视内部",
+      "恢复视角"
+    ],
+    "features": [
+      {
+        "title": "正压助力",
+        "text": "PAM在编织约束下产生轴向收缩。"
+      },
+      {
+        "title": "负压增刚",
+        "text": "负压增强PET重叠襟翼间摩擦。"
+      },
+      {
+        "title": "并联式腰椎助力",
+        "text": "双侧驱动器连接肩胸结构与骨盆腰带。"
+      }
+    ],
+    "states": [
+      {
+        "title": "外骨骼结构",
+        "image": "assets/exo-hero.webp",
+        "text": "来源：Figure 2结构图。"
+      },
+      {
+        "title": "驱动器分层",
+        "image": "assets/vsca-demo.jpg",
+        "text": "三维示意模型渲染。"
+      },
+      {
+        "title": "动作演示",
+        "image": "assets/exo-demo.jpg",
+        "text": "比例模型动作，不是实验录像。"
+      }
+    ],
+    "resources": [
+      {
+        "title": "展品说明与讲解词",
+        "kind": "HTML",
+        "url": "assets/exhibit-notes.html"
+      },
+      {
+        "title": "驱动器演示",
+        "kind": "MP4",
+        "url": "assets/vsca-demo.mp4"
+      },
+      {
+        "title": "外骨骼演示",
+        "kind": "MP4",
+        "url": "assets/exo-demo.mp4"
+      },
+      {
+        "title": "外骨骼模型",
+        "kind": "GLB",
+        "url": "assets/PVSAE-schematic.glb"
+      },
+      {
+        "title": "VSCA模型",
+        "kind": "GLB",
+        "url": "assets/VSCA-schematic.glb"
+      },
+      {
+        "title": "ODHA模型",
+        "kind": "GLB",
+        "url": "assets/ODHA-schematic.glb"
+      },
+      {
+        "title": "ODHA英文文稿",
+        "kind": "PDF",
+        "url": "assets/ODHA-paper.pdf"
+      },
+      {
+        "title": "ODHA螺旋运动演示",
+        "kind": "MP4",
+        "url": "assets/odha-demo.mp4"
+      }
+    ],
+    "source": "手稿激活程度版修改；补充材料；河海会议一种模式精简公式；上传ODHA英文PDF及Figure图像。",
+    "limits": "尺寸、隐藏连接与运动参数为展陈示意；未提供原始CAD或OpenSim模型，不作实测力学或人体助力验证。"
+  }
+}
