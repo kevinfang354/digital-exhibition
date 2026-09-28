@@ -1,0 +1,16 @@
+{
+  "exhibit_root": "/robotics/exhibits/biomimetic-assistance/",
+  "introduction": "/robotics/exhibits/biomimetic-assistance/",
+  "viewer": "/robotics/exhibits/biomimetic-assistance/viewer.html",
+  "models": {
+    "exo": "/robotics/exhibits/biomimetic-assistance/viewer.html?model=exo",
+    "vsca": "/robotics/exhibits/biomimetic-assistance/viewer.html?model=vsca",
+    "odha": "/robotics/exhibits/biomimetic-assistance/viewer.html?model=odha"
+  },
+  "homepage_card": "homepage-card.html",
+  "share_target": {
+    "id": "biomimetic-assistance",
+    "title": "柔顺与支撑 · 仿生变刚度驱动器与外骨骼",
+    "path": "exhibits/biomimetic-assistance/"
+  }
+}
